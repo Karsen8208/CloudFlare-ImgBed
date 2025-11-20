@@ -1,38 +1,22 @@
 export default {
     async fetch(request, env) {
-        const html = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>欢迎页面</title>
-            <style>
-                body { 
-                    font-family: Arial; 
-                    text-align: center; 
-                    padding: 50px; 
-                    background: #f0f0f0;
-                }
-                .container {
-                    background: white;
-                    padding: 40px;
-                    border-radius: 10px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>Hello World! 🌍</h1>
-                <p>你的 Cloudflare Worker 正在运行</p>
-            </div>
-        </body>
-        </html>
-        `;
+        const html = `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的网站</title>
+</head>
+<body>
+    <h1>欢迎访问我的网站</h1>
+    <p>这是一个测试页面，用于验证 Cloudflare Worker 是否正常工作。</p>
+    <p>如果这些中文字符显示正常，说明编码问题已经解决。</p>
+</body>
+</html>`;
 
         return new Response(html, {
             headers: {
-                'Content-Type': 'text/html; charset=utf-8',
-            },
+                'Content-Type': 'text/html; charset=UTF-8'
+            }
         });
     }
 }
