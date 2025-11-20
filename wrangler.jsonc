@@ -1,5 +1,5 @@
 {
-    "name": "karsen8208-cloudflare-imabed",
+    "name": "karsen-cloudflare-imabed",
     "compatibility_date": "2025-11-20",
     "main": "worker.js"
 }
